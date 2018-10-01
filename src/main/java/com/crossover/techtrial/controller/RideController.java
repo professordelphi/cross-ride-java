@@ -38,9 +38,9 @@ public class RideController {
   @GetMapping(path = "/api/ride/{ride-id}")
   public ResponseEntity<Ride> getRideById(@PathVariable(name="ride-id",required=true)Long rideId){
     Ride ride = rideService.findById(rideId);
-    if (ride!=null)
+//    if (ride!=null)
       return ResponseEntity.ok(ride);
-    return ResponseEntity.notFound().build();
+   // return ResponseEntity.notFound().build();
   }
   
   /**

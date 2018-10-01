@@ -43,7 +43,7 @@ public class TopDriverRepositoryTest {
 	
 	
 	@Test
-	public void testQtDrivers()
+	public void testNameDrivers()
 	{
 		String name="August";
 		assertEquals(name, topDriverDTO.getName());
