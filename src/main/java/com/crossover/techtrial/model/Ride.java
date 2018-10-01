@@ -75,7 +75,7 @@ public class Ride implements Serializable{
   }*/
   
   
-  
+  //I change the type String for type Date 
   public Date getStartTime() {
 	    return startTime;
 	  }
@@ -100,7 +100,7 @@ public class Ride implements Serializable{
     this.distance = distance;
   }
 
- /* public Person getDriver() {
+ public Person getDriver() {
     return driver;
   }
 
@@ -114,7 +114,7 @@ public class Ride implements Serializable{
 
   public void setRider(Person rider) {
     this.rider = rider;
-  }*/
+  }
   
   
 
