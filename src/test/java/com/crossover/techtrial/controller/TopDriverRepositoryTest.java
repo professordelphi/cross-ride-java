@@ -3,9 +3,11 @@
  */
 package com.crossover.techtrial.controller;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -21,13 +23,13 @@ import com.crossover.techtrial.dto.TopDriverDTO;
 @SpringBootTest
 public class TopDriverRepositoryTest {
 	
-	
+	TopDriverDTO topDriverDTO =new TopDriverDTO();
 
 	
 	@Before
 	public void setUp() throws Exception
 	{
-		TopDriverDTO topDriverDTO =new TopDriverDTO();
+		
 		
 		topDriverDTO.setAverageDistance(5.0);
 		topDriverDTO.setEmail("august@ig.com");
@@ -40,7 +42,12 @@ public class TopDriverRepositoryTest {
 	
 	
 	
-	
+	@Test
+	public void testQtDrivers()
+	{
+		String name="August";
+		assertEquals(name, topDriverDTO.getName());
+	}
 	
 	
 
