@@ -4,6 +4,8 @@
 package com.crossover.techtrial.model;
 
 import java.io.Serializable;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,11 +28,11 @@ public class Ride implements Serializable{
 
   @NotNull
   @Column(name = "start_time")
-  String startTime;
+  Date startTime;
   
   @NotNull
   @Column(name = "end_time")
-  String endTime;
+  Date endTime;
   
   @Column(name = "distance")
   Long distance;
@@ -51,7 +53,7 @@ public class Ride implements Serializable{
     this.id = id;
   }
 
-  public String getStartTime() {
+ /* public String getStartTime() {
     return startTime;
   }
 
@@ -65,7 +67,30 @@ public class Ride implements Serializable{
 
   public void setEndTime(String endTime) {
     this.endTime = endTime;
-  }
+    
+    Date d = new Date();
+  System.out.print(d + "\n");
+  SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+  System.out.println(sdf.format(d));
+  }*/
+  
+  
+  
+  public Date getStartTime() {
+	    return startTime;
+	  }
+
+	  public void setStartTime(Date startTime) {
+	    this.startTime = startTime;
+	  }
+
+	  public Date getEndTime() {
+	    return endTime;
+	  }
+
+	  public void setEndTime(Date endTime) {
+	    this.endTime = endTime;
+	  }
 
   public Long getDistance() {
     return distance;
@@ -75,7 +100,7 @@ public class Ride implements Serializable{
     this.distance = distance;
   }
 
-  public Person getDriver() {
+ /* public Person getDriver() {
     return driver;
   }
 
@@ -89,7 +114,7 @@ public class Ride implements Serializable{
 
   public void setRider(Person rider) {
     this.rider = rider;
-  }
+  }*/
   
   
 
